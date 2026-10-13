@@ -1,0 +1,49 @@
+<div class="border">
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <div class="round" style="position: absolute; width: 450px; left: 525px;">
+        <h1 style="position: absolute; left: 50px;">لیست دانشجویان ثبت نامی</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ویرایش کاربر</th>
+                <th>حذف کاربر</th>
+                <th>رشته تحصیلی</th>
+                <th>شماره دانشجویی</th>
+                <th>نام خانوادگی</th>
+                <th>نام</th>
+                <th>آیدی</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users ; let i = index">
+                <td>
+                    <input type="checkbox" (click)="updateUser(user)"/>
+                </td>
+                <td>
+                    <input type="checkbox" [(ngModel)]="user.selected"/>
+                </td>
+                <td>{{user.course}}</td>
+                <td>{{user.studentNumber}}</td>
+                <td>{{user.Lname}}</td>
+                <td>{{user.Fname}}</td>
+                <td>{{user.id}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <app-my-button
+    myTypeButton="add"
+    titleAddButton="add"
+    colorButton = "#a3ef80"
+    (myClick)="backToHome()">
+    </app-my-button>
+
+    <app-my-button
+    myTypeButton="delete"
+    titleDeleteButton="delete"
+    colorButton = "#fa5f5f"
+    (myClick)="deleteUser()">
+    </app-my-button>
+</div>

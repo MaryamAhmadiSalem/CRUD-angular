@@ -1,0 +1,14 @@
+<app-home *ngIf="!showUsers" (addUser)="addUserMethod($event)"></app-home>
+@if(showUsers){
+    <app-user
+        [users]="users" 
+        (update)="updateUser($event)"
+        (delete)="deleteUser($event)"
+        (back)="backHome()">
+    </app-user>
+}
+
+<!-- control flow syntax -->
+ <!-- @for(){
+    
+} -->

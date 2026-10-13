@@ -1,0 +1,5 @@
+<input type="button" class="add" value="{{titleAddButton}}" [style.background-color]="colorButton"
+ (click)="ClickButton()" *ngIf="myTypeButton === 'add' ">
+
+<input type="button" class="delete" value="{{titleDeleteButton}}" [style.background-color]="colorButton"
+ (click)="ClickButton()" *ngIf="myTypeButton == 'delete' ">

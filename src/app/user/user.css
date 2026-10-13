@@ -1,0 +1,24 @@
+table{
+    position: absolute;
+    border: 2px solid  #191970;
+    width: 1400px;
+    left: 57px;
+    top: 140px;
+}
+th , td{
+    position: relative;
+    border:1px solid #191970;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle; 
+    padding: 5px;
+}
+.input{
+    position: relative;
+    background-color: #191970;
+    color: #f5f6ff;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    top: 600px;
+}
